@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="output.css">
+        <script src="index.js"></script>
+        <title>Moodle - Dashboard</title>
+    </head> 
+    <body style="background-color:rgb(217,200,158);">
+        <header>
+            <!-- creating the nav bar -->
+            <nav class="flex items-center justify-between flex-wrap bg-white p-5 sticky">
+                <!-- logo for dashboard link -->
+                <div class="mr-6">
+                    <a href="dashboard.html">
+                        <img src="img/logo.png" alt="The Oakland University Logo" class="object-scale-down h-9">
+                    </a>
+                </div>
+                <!-- external links to other OU sites -->
+                <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto text-sm sm:flex-grow">
+                    <a href="https://www.oakland.edu/" class="nav-link">Students</a>
+                    <a href="https://mysail.oakland.edu/uPortal/f/welcome/normal/render.uP" class="nav-link">Faculty</a>
+                    <a href="https://www2.oakland.edu/secure/esp/" class="nav-link">Get Help</a>
+                </div>
+                <!-- logout link -->
+                <div>
+                    <a href="index.html" class="nav-link">Log Out</a>
+                </div>
+            </nav>
+        </header>
+    
+        <main>
+            <br>
+            <div class="bg-white rounded-3xl p-4">
+                <br>
+                <h1>Dashboard</h1>
+                <br>
+                <!-- user's enrolled courses -->
+                <h2>Course overview</h2>
+                <div class="flex justify-center items-center w-full relative">
+                    <div class="class-card bg-lime-500">
+                        <div class="class-card-in">
+                            <h2>CSI-3150</h2>
+                            <p>Winter Semester 2023</p>
+                        </div>
+                    </div>
+                    <div class="class-card bg-emerald-500">
+                        <div class="class-card-in">
+                            <h2>CSI-4500</h2>
+                            <p>Winter Semester 2023</p>
+                        </div>
+                    </div>
+                    <div class="class-card bg-cyan-500">
+                        <div class="class-card-in">
+                            <h2>CSI-4650</h2>
+                            <p>Winter Semester 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- user's assignments -->
+                <h2>Timeline</h2>
+                <!-- a form for filtering the assignments -->
+                <form onsubmit="return search()">
+                    <select id="due-date" class="p-2 rounded-md">
+                        <option value=0>All</option>
+                        <option value=1>Overdue</option>
+                        <option value=2>Next 7 Days</option>
+                        <option value=3>Next 30 Days</option>
+                        <option value=4>Next 3 months</option>
+                        <option value=5>Next 6 months</option>
+                    </select>
+                    <select id="sort-by" class="p-2 rounded-md">
+                        <option value=0>Sort by dates</option>
+                        <option value=1>Sort by courses</option>
+                    </select>
+                    <input id="submit" type="image" src="img/search.png" alt="submit" class="object-scale-down h-5">
+                </form>
+                <!-- the actual assignments -->
+                <div id="homeworks">
+                    <div class="homework">
+                        <p class="time-due">February 7, 2023 23:59</p>
+                        <img class="hw-img" src="img/upload.jpg">
+                        <div class="hw-text">
+                            <p class="hw-name">Programming Assignment 1</p>
+                            <p class="hw-class">CSI-4500</p>
+                        </div>
+                    </div>
+                    <div class="homework">
+                        <p class="time-due">March 7, 2023 23:59</p>
+                        <img class="hw-img" src="img/upload.jpg">
+                        <div class="hw-text">
+                            <p class="hw-name">Programming Assignment 2</p>
+                            <p class="hw-class">CSI-4500</p>
+                        </div>
+                    </div>
+                    <div class="homework">
+                        <p class="time-due">March 20, 2023 23:55</p>
+                        <img class="hw-img" src="img/web.jpg">
+                        <div class="hw-text">
+                            <p class="hw-name">CUDA Assignment</p>
+                            <p class="hw-class">CSI-4650</p>
+                        </div>
+                    </div>
+                    <div class="homework">
+                        <p name="time-due" class="time-due">March 24, 2023 23:55</p>
+                        <img class="hw-img" src="img/web.jpg">
+                        <div class="hw-text">
+                            <p class="hw-name">Pi Cluster Assignment</p>
+                            <p class="hw-class">CSI-4650</p>
+                        </div>
+                    </div>
+                    <div class="homework">
+                        <p name="time-due" class="time-due">March 24, 2023 23:59</p>
+                        <img class="hw-img" src="img/web.jpg">
+                        <div class="hw-text">
+                            <p class="hw-name">Project Phase 1</p>
+                            <p class="hw-class">CSI-3150</p>
+                        </div>
+                    </div>
+                    <div class="homework">
+                        <p name="time-due" class="time-due">April 3, 2023 23:55</p>
+                        <img class="hw-img" src="img/web.jpg">
+                        <div class="hw-text">
+                            <p class="hw-name">OpenMP Assignment</p>
+                            <p class="hw-class">CSI-4650</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

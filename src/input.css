@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link{
+    @apply block mt-4 sm:inline-block sm:mt-0 mr-4;
+}
+
+.class-card{
+    @apply rounded-md w-3/12 h-48 border-slate-400 border-4 m-4;
+}
+
+.class-card-in{
+    @apply relative top-32 bg-white rounded-sm flex-1;
+    height:56px;
+}
+
+.homework{
+    @apply w-full flex border rounded-md p-2;
+}
+
+.time-due{
+    @apply relative my-auto text-sm w-2/12 left-3;
+}
+
+.hw-img{
+    @apply relative rounded-md left-16
+}
+
+.hw-text{
+    @apply relative my-auto left-32
+}
+
+.hw-name{
+    @apply  text-lg;
+}
+
+.hw-class{
+}
+
+h1{
+    @apply text-2xl font-bold;
+}
+
+h2{
+    @apply text-xl font-semibold;
+}
+
+svg{
+    @apply w-8/12;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <script src="index.js"></script>
+    <title>Moodle - Log In</title>
+  </head> 
+  <body style="background-color:rgb(217,200,158);">
+    <header>
+      <!-- creating the nav bar -->
+      <nav class="flex items-center justify-between flex-wrap bg-white p-5 sticky">
+        <!-- logo for dashboard link -->
+        <div class="mr-6">
+          <a href="dashboard.html">
+            <img src="img/logo.png" alt="The Oakland University Logo" class="object-scale-down h-9">
+          </a>
+        </div>
+        <!-- external links to other OU sites -->
+        <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto text-sm sm:flex-grow">
+          <a href="https://www.oakland.edu/" class="nav-link">Students</a>
+          <a href="https://mysail.oakland.edu/uPortal/f/welcome/normal/render.uP" class="nav-link">Faculty</a>
+          <a href="https://www2.oakland.edu/secure/esp/" class="nav-link">Get Help</a>
+        </div>
+        <!-- login link -->
+        <div>
+          <a href="index.html" class="inline-block text-sm px-4 py-2 leading-none text-blue-500 hover:underline">Log In</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex justify-center items-center">
+      <div class="w-5/12">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <!-- login form -->
+        <form class="bg-white border-b rounded-lg p-8" onsubmit="return validate()">
+          <h1>Log in to Oakland University Moodle</h1>
+          <br>
+          <input id="username" type="text" placeholder="Username" required class="p-2 rounded-md flex mx-auto">
+          <br>
+          <input id="password" type="password" placeholder="Password" required class="p-2 rounded-md flex m-auto">
+          <br>
+          <input id="submit" type="submit" value="Log In" class="bg-blue-600 text-white p-2 rounded-md flex m-auto">
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
